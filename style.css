@@ -1,0 +1,291 @@
+/* Base Styling */  
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #121212;
+    color: #e0c080;
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    background: linear-gradient(90deg, #1e1e1e, #0d0d0d);
+    color: #e0c080;
+    padding: 5px 0; /* Kurangi padding di sekitar konten header */
+    max-height: 150px; /* Batasi tinggi maksimum header */
+    text-align: center;
+    border-bottom: 2px solid #e0c080;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.7);
+    overflow: hidden; /* Hapus elemen yang keluar dari batas header */
+    transition: padding 0.4s ease, background 0.4s ease;
+}
+
+/* Header Shrink Animation */
+.header-shrink {
+    padding: 3px 0;
+    background: linear-gradient(90deg, #0d0d0d, #1e1e1e);
+}
+
+/* Typography */
+h1 {
+    margin: 0;
+    font-size: 2em;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: font-size 0.4s ease;
+}
+
+.header-shrink h1 {
+    font-size: 1.6em;
+}
+
+p {
+    margin: 5px 0;
+    font-size: 1em;
+    color: #c9a84c;
+}
+
+/* Navigation */
+nav {
+    margin-top: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    color: #e0c080;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9em; /* Ukuran font lebih kecil */
+    padding: 4px 8px; /* Kurangi padding di setiap item menu */
+    border-radius: 4px;
+    transition: color 0.3s ease, background 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #fff;
+    background: rgba(224, 192, 128, 0.2);
+}
+
+/* Main Content */
+main {
+    margin: 120px auto 30px auto;
+    max-width: 900px;
+    padding: 30px;
+    background: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+}
+
+/* Section Headers */
+h2 {
+    color: #e0c080;
+    margin-bottom: 15px;
+    font-size: 1.8em;
+    font-weight: 600;
+}
+
+/* Skills Container */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+.skill {
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(224, 192, 128, 0.7);
+}
+
+/* Buttons */
+button {
+    padding: 10px 20px;
+    background-color: #e0c080;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #c9a84c;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #1e1e1e;
+    color: #e0c080;
+    border-top: 1px solid #e0c080;
+}
+
+/* Social Media */
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-media a {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.social-media a:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 5px rgba(224, 192, 128, 0.8));
+}
+
+.social-media img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Contact Section */
+#contact {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#contact h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+#contact form {
+    max-width: 600px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.6);
+}
+
+/* Styles for input and textarea */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #f4c542;
+    border-radius: 5px;
+    background-color: #333;
+    color: #f4c542;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #d4a12c;
+    outline: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        padding: 3px 0; /* Lebih kecil di layar lebih kecil */
+        max-height: 120px;
+    }
+
+    h1 {
+        font-size: 1.4em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .skills-container {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+
+    main {
+        padding: 20px;
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 2px 0; /* Lebih kecil di layar terkecil */
+        max-height: 100px;
+    }
+
+    h1 {
+        font-size: 1.2em;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+
+    nav ul li a {
+        font-size: 0.8em;
+        padding: 6px 10px;
+    }
+
+    .social-media img {
+        width: 20px;
+        height: 20px;
+    }
+
+    button {
+        font-size: 0.9em;
+    }
+}
+
+/* Responsive Image in Projects */
+.projects img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Responsive Image Inside li > a */
+li a img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect for Image Inside li > a */
+li a:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(224, 192, 128, 0.7);
+}
+
+/* Additional Responsiveness for Smaller Screens */
+@media (max-width: 480px) {
+    li a img {
+        border-radius: 5px;
+    }
+}
